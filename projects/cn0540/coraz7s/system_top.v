@@ -63,6 +63,21 @@ module system_top (
   inout   [1:0]   btn,
   inout   [5:0]   led,
 
+  input           cn0540_xadc_vp_vn_p,
+  input           cn0540_xadc_vp_vn_n,
+  input           cn0540_xadc_vaux1_p,
+  input           cn0540_xadc_vaux1_n,
+  input           cn0540_xadc_vaux5_p,
+  input           cn0540_xadc_vaux5_n,
+  input           cn0540_xadc_vaux6_p,
+  input           cn0540_xadc_vaux6_n,
+  input           cn0540_xadc_vaux9_p,
+  input           cn0540_xadc_vaux9_n,
+  input           cn0540_xadc_vaux13_p,
+  input           cn0540_xadc_vaux13_n,
+  input           cn0540_xadc_vaux15_p,
+  input           cn0540_xadc_vaux15_n,
+
   inout           cn0540_scl,
   inout           cn0540_sda,
 
@@ -176,7 +191,21 @@ module system_top (
     .spi1_csn_i (1'b1),
     .spi1_sdi_i (1'b0),
     .spi1_sdo_i (1'b0),
-    .spi1_sdo_o());
+    .spi1_sdo_o(),
+    .xadc_vp_vn_v_p  (cn0540_xadc_vp_vn_p),
+    .xadc_vp_vn_v_n  (cn0540_xadc_vp_vn_n),
+    .xadc_vaux1_v_p  (cn0540_xadc_vaux1_p),
+    .xadc_vaux1_v_n  (cn0540_xadc_vaux1_n),
+    .xadc_vaux5_v_p  (cn0540_xadc_vaux5_p),
+    .xadc_vaux5_v_n  (cn0540_xadc_vaux5_n),
+    .xadc_vaux6_v_p  (cn0540_xadc_vaux6_p),
+    .xadc_vaux6_v_n  (cn0540_xadc_vaux6_n),
+    .xadc_vaux9_v_p  (cn0540_xadc_vaux9_p),
+    .xadc_vaux9_v_n  (cn0540_xadc_vaux9_n),
+    .xadc_vaux13_v_p (cn0540_xadc_vaux13_p),
+    .xadc_vaux13_v_n (cn0540_xadc_vaux13_n),
+    .xadc_vaux15_v_p (cn0540_xadc_vaux15_p),
+    .xadc_vaux15_v_n (cn0540_xadc_vaux15_n));
 
 endmodule
 
